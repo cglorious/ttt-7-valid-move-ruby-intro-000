@@ -6,10 +6,10 @@ move = index - 0
 def valid_move?(board, move)
   if position_taken?(board, move) == true
     false
-  else
+  else position_taken?(board, move) == false
     if position_taken?(board,move) != move.between?(0,8)
       false
-    else position_taken?(board, move) == false && move.between?(0,8)
+    else position_taken?(board, move) == move.between?(0,8)
       true
     end
   end
